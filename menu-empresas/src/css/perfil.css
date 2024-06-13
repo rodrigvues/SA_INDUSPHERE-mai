@@ -1,0 +1,120 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(90deg, #1f1c54 , #04061b);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-container {
+    margin-bottom: 20px; /* Espaço entre a logo e o formulário */
+}
+
+.logo {
+    max-width: 1500px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+}
+
+.profile-container {
+    background: rgba(17, 24, 39, 0.8); /* Fundo escuro com opacidade */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    width: 600px; /* Largura ajustada */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(10px);
+}
+
+.profile-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    color: #ffffff;
+}
+
+.profile-form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    width: 100%; /* Adicionado para centralizar */
+}
+
+.form-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    display: block;
+    color: #ffffff;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.5);
+    transition: background 0.3s ease;
+}
+
+.form-group input:focus {
+    background: rgba(255, 255, 255, 0.2);
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), inset 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.half-width {
+    width: 48%;
+    margin-bottom: 15px; /* Espaçamento inferior entre as linhas */
+}
+
+.half-width:nth-child(odd) {
+    margin-right: 4%;
+}
+
+.full-width {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centraliza o botão */
+}
+
+.profile-btn {
+    width: 50%; /* Ajuste o tamanho conforme necessário */
+    padding: 10px;
+    background: linear-gradient(45deg, #00bfff, #1e90ff);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+}
+
+.profile-btn:hover {
+    background: linear-gradient(45deg, #1e90ff, #00bfff);
+    box-shadow: 0 0 20px rgba(0, 191, 255, 0.8);
+}
+
+h2 {
+    color: #fff;
+}

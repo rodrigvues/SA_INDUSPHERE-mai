@@ -1,0 +1,13 @@
+<h1 align="center">
+  Menu das Epresas - SA
+</h1>
+
+
+## 📓 Projeto
+Este é um projeto de menu de áreas que estamos desenvolvendo como parte de um projeto escolar dentro da nossa empresa. 
+Por enquanto, está em fase inicial e ainda não está finalizado.
+
+## 🧑‍💻 Tecnologias
+- HTML
+- CSS
+-JS
