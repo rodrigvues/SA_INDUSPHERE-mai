@@ -1,0 +1,27 @@
+.card {
+    border: 1px solid black; 
+    border-radius: 5px; 
+    padding: 10px;
+    width: 150px; 
+    text-align: center; 
+}
+
+.card img {
+    margin-top: 10px;
+    max-width: 50px; 
+    max-height: 50px; 
+}
+
+h2 {
+    color: #fff;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+h3{
+    align-items: end;
+    margin: 0%;
+}
