@@ -90,7 +90,7 @@ table, th, td {
     padding: 0.5rem;
 }
 td {
-    color: #fff;
+    color: #03073a;
 }
 
 th {
@@ -105,8 +105,8 @@ input, button {
 }
 
 #download-report {
-    background-color: #fff;
-    color: #03073a;
+    background-color: #03073a;
+    color: #fff;
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 4px;
@@ -114,6 +114,7 @@ input, button {
     font-size: 1rem;
     margin-bottom: 1rem;
     font-weight: 600;
+    margin-top: 20px;
 }
 
 button {
@@ -122,12 +123,25 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-weight: 600;
 }
 
 button:hover {
     background-color: #040a58;
 }
 
+#download-report:hover{
+    background-color: #040a58;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    margin-top: 20px;
+}
 p{
     margin-left: 25px;
     color: #fff;
@@ -268,3 +282,11 @@ ul :hover{
     border-radius: 10px;
     
 }
+
+main.container {
+    background-color: #fff; 
+    padding: 20px; 
+    margin-top: 100px; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}   

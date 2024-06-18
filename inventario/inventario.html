@@ -22,7 +22,6 @@
     <main class="container">
         <div id="inventoryPage">
             <h2>Itens do Inventário</h2>
-            <button id="download-report">Baixar Relatório</button>
             <table id="inventory-table">
                 <thead>
                     <tr>
@@ -32,25 +31,27 @@
                         <th>Quantidade</th>
                         <th>Preço</th>
                         <th>Ações</th>
+                        
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- Itens serão adicionados aqui dinamicamente -->
+            
                 </tbody>
             </table>
+            <button id="download-report">Baixar Relatório</button>
         </div>
     </main>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
     <script src="scripts.js"></script>
     <script>
-        // Sample data
+
         const inventoryData = [
             { id: 1, name: 'Item 1', category: 'Category 1', quantity: 10, price: 100 },
             { id: 2, name: 'Item 2', category: 'Category 2', quantity: 20, price: 200 },
         ];
 
-        // Add delete button for each item
+
         const tbody = document.querySelector('#inventory-table tbody');
         inventoryData.forEach(item => {
             const tr = document.createElement('tr');
