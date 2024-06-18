@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatórios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../menu-empresas/index.html">
+                <h1>Gestão de Inventário</h1>
+            </a>
+            <ul>
+                <li><a href="inventario.html" id="itemLink">Inventário</a></li>
+                <li><a href="item.html" id="reportsLink">Adicionar Item</a></li>
+                <li><a href="relatorio.html" id="budgetLink">Relatórios</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="inventory">
+            <h2>Itens do Inventário</h2>
+            <button id="download-report">Baixar Relatório</button>
+            <table id="inventory-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome do Item</th>
+                        <th>Categoria</th>
+                        <th>Quantidade</th>
+                        <th>Preço</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Teclado Mecânico</td>
+                        <td>Eletrônicos</td>
+                        <td>50</td>
+                        <td>R$200,00</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Monitor LED</td>
+                        <td>Eletrônicos</td>
+                        <td>30</td>
+                        <td>R$800,00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script>
+        document.getElementById('download-report').addEventListener('click', function () {
+            var table = document.getElementById('inventory-table');
+            var wb = XLSX.utils.table_to_book(table, {sheet: "Inventário"});
+            XLSX.writeFile(wb, 'relatorio_inventario.xlsx');
+        });
+    </script>
+</body>
+</html>
