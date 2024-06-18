@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../menu-empresas/index.html">
+                <h1>Gestão de Inventário</h1>
+            </a>
+            <ul>
+                <li><a href="inventario.html" id="itemLink">Inventário</a></li>
+                <li><a href="item.html" id="reportsLink">Adicionar Item</a></li>
+                <li><a href="relatorio.html" id="budgetLink">Relatórios</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <div id="inventoryPage">
+            <h2>Itens do Inventário</h2>
+            <button id="download-report">Baixar Relatório</button>
+            <table id="inventory-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome do Item</th>
+                        <th>Categoria</th>
+                        <th>Quantidade</th>
+                        <th>Preço</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Itens serão adicionados aqui dinamicamente -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="scripts.js"></script>
+    <script>
+        // Sample data
+        const inventoryData = [
+            { id: 1, name: 'Item 1', category: 'Category 1', quantity: 10, price: 100 },
+            { id: 2, name: 'Item 2', category: 'Category 2', quantity: 20, price: 200 },
+        ];
+
+        // Add delete button for each item
+        const tbody = document.querySelector('#inventory-table tbody');
+        inventoryData.forEach(item => {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td>${item.id}</td>
+                <td>${item.name}</td>
+                <td>${item.category}</td>
+                <td>${item.quantity}</td>
+                <td>${item.price}</td>
+                <td>
+                    <button class="delete-btn">Excluir</button>
+                </td>
+            `;
+            tbody.appendChild(tr);
+
+            // Attach click event listener to the delete button
+            const deleteBtn = tr.querySelector('.delete-btn');
+            deleteBtn.addEventListener('click', () => {
+                if (confirm('Tem certeza que deseja excluir este item?')) {
+                    tbody.removeChild(tr);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
