@@ -37,25 +37,37 @@
             flex-grow: 1;
             justify-content: center;
         }
-        .input-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
             margin-bottom: 20px;
-            width: 700px;
+            align-self: flex-start;
+        }
+        .input-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            width: 600px;
         }
         .input-container label {
             font-size: 18px;
             margin-bottom: 5px;
         }
         .input-container input {
-            padding: 20px;
+            padding: 15px;
             border-radius: 30px;
             border: none;
             width: 100%;
-            font-size: 20px;
+            font-size: 18px;
             background-color: #A0A0A0;
             color: #FFFFFF;
+            margin-bottom: 5px;
+        }
+        .input-container .input-note {
+            font-size: 12px;
+            color: #A0A0A0;
+            align-self: flex-end;
         }
         .button {
             display: inline-block;
@@ -78,7 +90,7 @@
             background-color: #FFFFFF;
             border: 2px solid #FFFFFF;
             color: #0F1534;
-            align-self: center;
+            align-self: flex-end;
         }
         .continue-button:hover {
             background-color: #0F1534;
@@ -99,26 +111,14 @@
         <div class="title">Quero Enviar</div>
     </div>
     <div class="container">
+        <div class="section-title">Informe o valor do item</div>
         <div class="input-container">
-            <div>
-                <label for="height">Altura:</label>
-                <input type="text" id="height" name="height" placeholder="Insira a altura">
-            </div>
-            <div>
-                <label for="width">Largura:</label>
-                <input type="text" id="width" name="width" placeholder="Insira a largura">
-            </div>
-            <div>
-                <label for="length">Comprimento:</label>
-                <input type="text" id="length" name="length" placeholder="Insira o comprimento">
-            </div>
-            <div>
-                <label for="weight">Peso:</label>
-                <input type="text" id="weight" name="weight" placeholder="Insira o peso">
-            </div>
+            <label for="item-value">Valor do item:</label>
+            <input type="text" id="item-value" name="item-value" placeholder="Insira o valor do item">
+            <div class="input-note">Calculamos o seguro do item com base no valor declarado, reembolsando até R$ 10.000,00</div>
         </div>
-        <a href="./enviarremetente.html" class="button continue-button">Continuar</a>
+        <a href="#" class="button continue-button">Continuar</a>
     </div>
-    <a href="./enviar2.html" class="button back-button">Voltar</a>
+    <a href="./enviardestinatario.html" class="button back-button">Voltar</a>
 </body>
 </html>
