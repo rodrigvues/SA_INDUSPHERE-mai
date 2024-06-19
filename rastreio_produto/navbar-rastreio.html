@@ -2,39 +2,96 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Horizontal Moderno</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Rastreamento de Encomendas</title>
     <link rel="stylesheet" href="../menu-empresas/src/css/navbar-pai.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https: //fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <div class="logo">
-            <img src="logo.png" alt="Logo" />
-        </div>
-        <div class="menu-toggle" onclick="toggleMenu()">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-        <nav>
-            <ul class="menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="../rastreio/perfil.html">perfil</a></li>
-            </ul>
-        </nav>
-        <div class="user-icon">
-            <img src="user.png" alt="User" />
-        </div>
-    </header>
+</html>
 
-    <script>
-        function toggleMenu() {
-            document.querySelector('.menu').classList.toggle('active');
+    <style>
+        body {
+            background-color: #03073A;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #FFFFFF;
         }
-    </script>
+        .container {
+            text-align: center;
+        }
+
+        .iconlogo {
+            height: 300px;
+            width: 300px;
+            margin-bottom: 40px;
+        }
+        .button {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #A0A0A0;
+            color: #FFFFFF;
+            padding: 20px 30px;
+            border-radius: 30px;
+            margin: 20px 0;
+            width: 500px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 24px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .button:hover {
+            background-color: #FFFFFF;
+            color: #0F1534;
+        }
+        .button img {
+            height: 32px;
+            width: 32px;
+        }
+        a{
+            color: #FFFFFF;
+            text-decoration: none;
+            
+        }
+        h1{
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<header>
+    <div class="header">
+        <a href="../menu-empresas/index.html">
+            <h1>Rastreamento</h1>
+        </a>  
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+   
+</header>
+
+
+<body> 
+    </div>
+    <div class="container">
+        <img class="iconlogo" src="./iconlogo.png" alt="Icon">
+        <a href="./rastrear.html" class="button">
+            <img src="https://via.placeholder.com/32" alt="Track Icon">
+            Quero Rastrear Minha Encomenda
+            <img src="https://via.placeholder.com/32" alt="Track Icon">
+        </a>
+        <a href="./enviar.html" class="button">
+            <img src="https://via.placeholder.com/32" alt="Send Icon">
+            Quero Enviar
+            <img src="https://via.placeholder.com/32" alt="Send Icon">
+        </a>
+    </div>
 </body>
 </html>
