@@ -211,6 +211,7 @@ h2 {
     border-radius: 4px;
 }
 
+
 @media (max-width: 768px) {
     .machines {
         grid-template-columns: 1fr;

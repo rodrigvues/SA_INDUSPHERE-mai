@@ -3,42 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Login</title>
-    <link rel="stylesheet" href="Style tela de login.css">
+    <title>Monitoramento e Gestão de Máquinas - Empresa Têxtil</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="main-container">
-        <div class="logo-container">
-            <img src="LogoPng.png" alt="Logo" class="logo">
+    <header>
+        <nav class="navbar">
+            <div class="nav-left">
+                <a href="../menu-empresas/index.html" class="nav-link">Monitoramento de Máquina</a>
+                <a href="#" class="nav-link btn-responsive">Geral</a>
+                <a href="Kpi Maquinas.html" class="nav-link btn-responsive">Kpi Máquinas</a>
+                <div class="dropdown">
+                    <a href="Cadastro maquina.html" class="nav-link btn-responsive">Cadastros</a>
+                </div> 
+            </div>
+            <div class="nav-right">
+                <button class="btn notifications btn-responsive" onclick="toggleNotifications()">
+                    <i class="fas fa-bell"></i> Notificações
+                </button>
+            </div>
+        </nav>
+    </header>
+    <div class="filter-container">
+        <select id="center">
+            <option value="generalFactory">Centro de Trabalho: Geral Fábrica</option>
+        </select>
+        <select id="shift">
+            <option value="firstShift">Turno: 1º turno</option>
+        </select>
+        <select id="period">
+            <option value="currentWeek">Período: 01/02/2024 - 08/02/2024</option>
+        </select>
+    </div>
+    <div class="container">
+        <div class="dashboard">
+            <h2>Dashboard Máquinas</h2>
+            <p>Qtd. produzida / Qtd. planejada</p>
+            <div class="progress">
+                <div class="progress-bar" style="width: 35%;"></div>
+            </div>
+            <p>1.670 / 4.750</p>
         </div>
-        <div class="login-container">
-            <form class="login-form" onsubmit="handleLogin(event)">
-                <h2>Login</h2>
-                <div class="form-group">
-                    <label for="username">Nome</label>
-                    <input type="text" id="username" name="username" required>
-                </div>
-                <div class="form-group">
-                    <label for="password">Senha</label>
-                    <input type="password" id="password" name="password" required>
-                </div>
-                <div class="form-group">
-                    <a href="#" class="forgot-password">Esqueci a minha senha</a>
-                </div>
-                <button type="submit" class="login-btn">Entrar</button>
-            </form>
+        <div class="metrics">
+            <div class="metric">
+                <h3>OEE</h3>
+                <canvas id="oeeGauge" width="100" height="100"></canvas>
+            </div>
+            <div class="metric">
+                <h3>Disponibilidade</h3>
+                <canvas id="disponibilidadeGauge" width="100" height="100"></canvas>
+            </div>
+            <div class="metric">
+                <h3>Performance</h3>
+                <canvas id="performanceGauge" width="100" height="100"></canvas>
+            </div>
+            <div class="metric">
+                <h3>Qualidade</h3>
+                <canvas id="qualidadeGauge" width="100" height="100"></canvas>
+            </div>
+        </div>
+        <div class="charts">
+            <div class="chart chart-small">
+                <h3>OEE por Dia</h3>
+                <canvas id="lineChart"></canvas>
+            </div>
+            <div class="chart chart-small">
+                <h3>Timeline Máquinas</h3>
+                <canvas id="timelineChart"></canvas>
+            </div>
+            <div class="chart chart-small">
+                <h3>Motivos de parada</h3>
+                <canvas id="downtimeChart"></canvas>
+            </div>
         </div>
     </div>
-    <script>
-        function handleLogin(event) {
-            event.preventDefault();
-            // Aqui você pode adicionar validação adicional se necessário
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-
-            // Redirecionar para a página inicial
-            window.location.href = 'index2.html';
-        }
-    </script>
+    <div id="notificationsSidebar" class="notifications-sidebar">
+        <h2>Notificações</h2>
+        <div class="notification">
+            <p>Não há notificações no momento.</p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="Jscrpt.js"></script>
 </body>
 </html>
