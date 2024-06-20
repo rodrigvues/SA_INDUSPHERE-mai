@@ -1,0 +1,82 @@
+
+:root{
+    --color1: #03073a;
+    --color2:#1c204a;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color1);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+img{
+    max-width: 80px ;
+    margin-right: 0.4rem;
+}
+nav {
+    background-color: var(--color2);
+    padding: 14px 0;
+    text-align: center;
+    
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin: 0.6rem;
+}
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+    font-size: 1.3rem;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+.report-form {
+    text-align: center;
+    margin-top: 40px;
+}
+.report-form input[type="text"],
+.report-form input[type="submit"] {
+    padding: 12px;
+    margin: 10px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.report-form input[type="submit"] {
+    background-color: white;
+    color: #0c8e0c;
+    border: 0.1rem solid #0c8e0c;
+    cursor: pointer;
+}
+
+.report-form input[type="submit"]:hover{
+    background-color: #0c8e0c;
+    color: white;
+}
+.homepage {
+    padding: 20px;
+    text-align: center;
+}
+.button {
+    background-color: var(--color2);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.button:hover {
+    font-size: 1.2rem;
+}
