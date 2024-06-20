@@ -1,0 +1,234 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background: url('Fundopng.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 18px;
+    position: relative;
+}
+
+.nav-link:hover::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    bottom: -2px;
+    left: 0;
+}
+
+.notifications {
+    background-color: #ff9800;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.notifications:hover {
+    background-color: #e68a00;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.filter-container select {
+    margin-right: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #2c3e50;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #2c3e50;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.filter-container select:hover {
+    background-color: #2c3e50;
+    color: #fff;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+.machines {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.machine-card {
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 2px solid #ddd;
+}
+
+.machine-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.machine-card.failure {
+    border-color: #ff4d4d;
+}
+
+.machine-card.producing {
+    border-color: #4caf50;
+}
+
+.machine-card.operating {
+    border-color: #00bfff;
+}
+
+.machine-card h2 {
+    margin-top: 0;
+    color: #172b4d;
+}
+
+.machine-card h2 span {
+    display: block;
+    font-size: 14px;
+    color: #ff4d4d;
+}
+
+.machine-info p {
+    margin: 5px 0;
+}
+
+.progress {
+    background-color: #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 20px;
+    margin: 10px 0;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #00bfff;
+}
+
+.gauge {
+    margin: 10px auto;
+    width: 100px;
+    height: 100px;
+}
+
+.notifications-sidebar {
+    background: #333;
+    color: white;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 300px;
+    overflow-y: auto;
+    padding-top: 60px;
+    right: -300px;
+    transition: transform 0.3s ease;
+    display: none;
+}
+
+.notifications-sidebar.active {
+    display: block;
+    transform: translateX(-300px);
+}
+
+.notifications-sidebar h2 {
+    color: #00bfff;
+}
+
+.notification {
+    background-color: #555;
+    padding: 10px;
+    border-left: 6px solid #ff9800;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    .machines {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-buttons {
+        margin-top: 10px;
+    }
+
+    .header-buttons button {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+}

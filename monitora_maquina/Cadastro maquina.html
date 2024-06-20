@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Máquina</title>
+    <link rel="stylesheet" href="Style cadastro.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-left">
+                <a href="index2.html" class="nav-link">Geral</a>
+                <a href="Kpi Maquinas.html" class="nav-link">Kpi Máquinas</a>
+                <a href="cadastro_maquina.html" class="nav-link">Cadastro de Máquina</a>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Cadastro de Máquina</h2>
+        <form id="machineForm">
+            <div class="form-group">
+                <label for="id_maquina">ID Máquina:</label>
+                <input type="text" id="id_maquina" name="id_maquina" required>
+            </div>
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="id_tipo_maquina">ID Tipo da Máquina:</label>
+                <input type="text" id="id_tipo_maquina" name="id_tipo_maquina" required>
+            </div>
+            <div class="form-group">
+                <label for="data_instalacao">Data da Instalação:</label>
+                <input type="date" id="data_instalacao" name="data_instalacao" required>
+            </div>
+            <div class="form-group">
+                <label for="setor">Setor:</label>
+                <input type="text" id="setor" name="setor" required>
+            </div>
+            <div class="form-group">
+                <label for="id_usuario">Operador :</label>
+                <select id="id_usuario" name="id_usuario" required>
+                    <option value="user1">Operador 1</option>
+                    <option value="user2">Operador 2</option>
+                    <option value="user3">Operador 3</option>
+                    <!-- Adicione mais opções conforme necessário -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="data_ultima_manutencao">Data da Última Manutenção:</label>
+                <input type="date" id="data_ultima_manutencao" name="data_ultima_manutencao" required>
+            </div>
+            <button type="submit" class="btn">Cadastrar</button>
+        </form>
+    </div>
+    <script src="JavaScript cadastro.js"></script>
+</body>
+</html>
