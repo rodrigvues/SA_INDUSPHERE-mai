@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuario</title>
+    <link rel="stylesheet" href="adm.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="profile-container">
+            <h2>Cadastro de usuario</h2>
+            <form action="/salvar_perfil" method="post" class="profile-form">
+                <div class="form-group half-width">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form-group half-width">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group half-width">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" required>
+                </div>
+                <div class="form-group half-width">
+                    <label for="confirmar-senha">Confirmar Senha:</label>
+                    <input type="password" id="confirmar-senha" name="confirmar_senha" required>
+                </div>
+                <div class="form-group full-width">
+                    <button type="button" class="dropdown-btn" onclick="toggleDropdown()">Escolher Empresa</button>
+                    <div class="checkbox-container" id="checkbox-container">
+                        <label class="checkbox-item"><input type="checkbox" name="empresas" value="empresa1"> Empresa 1</label>
+                        <label class="checkbox-item"><input type="checkbox" name="empresas" value="empresa2"> Empresa 2</label>
+                        <label class="checkbox-item"><input type="checkbox" name="empresas" value="empresa3"> Empresa 3</label>
+                        <label class="checkbox-item"><input type="checkbox" name="empresas" value="empresa4"> Empresa 4</label>
+                        <label class="checkbox-item"><input type="checkbox" name="empresas" value="empresa5"> Empresa 5</label>
+                        <label class="checkbox-item"><input type="checkbox" name="empresas" value="empresa6"> Empresa 6</label>
+                        <label class="checkbox-item"><input type="checkbox" name="empresas" value="empresa7"> Empresa 7</label>
+                        <label class="checkbox-item"><input type="checkbox" name="empresas" value="empresa8"> Empresa 8</label>
+                    </div>
+                </div>
+                <div class="form-group full-width">
+                    <button type="submit" class="profile-btn">Salvar</button>
+                </div>
+                <div class="form-group full-width">
+                    <button type="submit" class="profile-btn">Voltar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        function toggleDropdown() {
+            var checkboxContainer = document.getElementById("checkbox-container");
+            if (checkboxContainer.style.display === "none" || checkboxContainer.style.display === "") {
+                checkboxContainer.style.display = "flex";
+            } else {
+                checkboxContainer.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
