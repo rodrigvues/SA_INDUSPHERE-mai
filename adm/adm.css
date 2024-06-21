@@ -110,7 +110,6 @@ body {
 }
 
 .profile-btn:hover {
-    background: linear-gradient(45deg, #1e90ff, #00bfff);
     box-shadow: 0 0 20px rgba(0, 191, 255, 0.8);
 }
 
@@ -140,4 +139,13 @@ h2 {
 
 .checkbox-item input {
     margin-right: 10px;
+}
+
+button.dropdown-btn{
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: linear-gradient(45deg, #00bfff, #1e90ff);
+    width: 200px;
+    align-items: center;
+    text-align: center;
 }

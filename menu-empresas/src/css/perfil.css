@@ -99,7 +99,7 @@ body {
 }
 
 .profile-btn {
-    width: 50%; /* Ajuste o tamanho conforme necessário */
+    width: 48%;
     padding: 10px;
     background: linear-gradient(45deg, #00bfff, #1e90ff);
     color: white;
@@ -108,10 +108,11 @@ body {
     cursor: pointer;
     transition: background 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    text-decoration: none;
+    text-align: center;
 }
 
 .profile-btn:hover {
-    background: linear-gradient(45deg, #1e90ff, #00bfff);
     box-shadow: 0 0 20px rgba(0, 191, 255, 0.8);
 }
 
