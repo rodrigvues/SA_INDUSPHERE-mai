@@ -1,0 +1,94 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #03073a;
+    margin: 0;
+    padding: 20px;
+    color: #fff;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.add-product-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.form-left, .form-right {
+    width: 45%;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    display: block;
+    font-size: 14px;
+    color: #ddd;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.checkbox-and-button {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.checkbox-group input {
+    width: auto;
+    margin-right: 10px;
+}
+
+#add-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+#add-button:hover {
+    background-color: #218838;
+}

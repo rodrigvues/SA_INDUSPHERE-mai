@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Produto</title>
+    <link rel="stylesheet" href="adicionar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="header">
+            <a href="../menu-empresas/index.html">
+                <h1>Tela Principal</h1>
+            </a>
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="adicionar.html">Adicionar Produto</a></li>
+                <li><a href="index.html">Verificar Estoque</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.menu').classList.toggle('active');
+        }
+    </script>
+    
+    <div class="container">
+        <h1>Adicionar Produto</h1>
+        <form class="add-product-form" id="add-product-form">
+            <div class="form-left">
+                <div class="form-group">
+                    <label for="produto">Produto:</label>
+                    <input type="text" id="produto" name="produto" required>
+                </div>
+                <div class="form-group">
+                    <label for="preco">Preço:</label>
+                    <input type="text" id="preco" name="preco" required>
+                </div>
+                <div class="form-group">
+                    <label for="quantidade">Quantidade:</label>
+                    <input type="number" id="quantidade" name="quantidade" required min="0">
+                </div>
+            </div>
+            <div class="form-right">
+                <div class="form-group">
+                    <label for="codigo">Código:</label>
+                    <input type="text" id="codigo" name="codigo" required>
+                </div>
+                <div class="form-group">
+                    <label for="obs">Observações:</label>
+                    <textarea id="obs" name="obs"></textarea>
+                </div>
+                <div class="checkbox-and-button">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="checkbox" name="checkbox">
+                        <label for="checkbox">Marcar</label>
+                    </div>
+                    <button type="submit" id="add-button">Adicionar Produto</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('add-product-form');
+            const urlParams = new URLSearchParams(window.location.search);
+            const productIndex = urlParams.get('index');
+
+            if (productIndex !== null) {
+                const produtos = JSON.parse(localStorage.getItem('produtos')) || [];
+                const produto = produtos[productIndex];
+
+                document.getElementById('produto').value = produto.produto;
+                document.getElementById('preco').value = produto.preco;
+                document.getElementById('quantidade').value = produto.quantidade;
+                document.getElementById('codigo').value = produto.codigo;
+                document.getElementById('obs').value = produto.obs;
+
+                form.addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    produto.produto = document.getElementById('produto').value;
+                    produto.preco = document.getElementById('preco').value;
+                    produto.quantidade = document.getElementById('quantidade').value;
+                    produto.codigo = document.getElementById('codigo').value;
+                    produto.obs = document.getElementById('obs').value;
+
+                    produtos[productIndex] = produto;
+                    localStorage.setItem('produtos', JSON.stringify(produtos));
+
+                    window.location.href = 'index.html';
+                });
+            } else {
+                form.addEventListener('submit', function(event) {
+                    event.preventDefault();
+
+                    const produto = document.getElementById('produto').value;
+                    const preco = document.getElementById('preco').value;
+                    const quantidade = document.getElementById('quantidade').value;
+                    const codigo = document.getElementById('codigo').value;
+                    const obs = document.getElementById('obs').value;
+
+                    const produtoObj = { produto, preco, quantidade, codigo, obs };
+                    let produtos = JSON.parse(localStorage.getItem('produtos')) || [];
+                    produtos.push(produtoObj);
+                    localStorage.setItem('produtos', JSON.stringify(produtos));
+
+                    window.location.href = 'index.html';
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #03073a;
+    margin: 0;
+    padding: 20px;
+    color: #fff;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.search-container {
+    position: relative;
+    width: 80%;
+}
+
+#search {
+    padding: 10px 10px 10px 40px;
+    font-size: 16px;
+    width: 100%;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+#search:focus {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.search-container .fas {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+}
+
+#add-product {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+#add-product:hover {
+    background-color: #0056b3;
+}
+
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.product-table th, .product-table td {
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: left;
+}
+
+.product-table th {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.product-table tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.edit, .delete {
+    padding: 8px 16px;
+    margin: 0 2px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit {
+    background-color: #17a2b8;
+    color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.edit:hover {
+    background-color: #138496;
+}
+
+.delete {
+    background-color: #dc3545;
+    color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.delete:hover {
+    background-color: #c82333;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
