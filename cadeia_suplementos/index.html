@@ -37,8 +37,10 @@
     <div class="container">
         <div class="header">
             <div class="search-container">
+                
                 <input type="text" id="search" placeholder="Pesquisar...">
-                <i class="fas fa-search"></i>
+                
+                
             </div>
             <a href="adicionar.html" id="add-product" class="button">Adicionar Produto</a>
         </div>
@@ -137,20 +139,16 @@
         }
 
         .container {
+        
             width: 80%;
             margin: 0 auto;
-            padding: 20px;
+            margin-top: 120px;
         }
 
         .header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .search-container {
-            position: relative;
         }
 
         .search-container input {
@@ -159,7 +157,6 @@
         }
 
         .search-container .fas {
-            position: absolute;
             right: 10px;
             top: 50%;
             transform: translateY(-50%);
@@ -184,7 +181,7 @@
 
         .product-table th, .product-table td {
             padding: 10px;
-            border: 1px solid #ddd;
+            border: 1px solid #ffffff;
             text-align: left;
         }
 
@@ -274,6 +271,9 @@
         .close:focus {
             color: #fff;
             text-decoration: none;
+        }
+        td{
+            color: #fff;
         }
     </style>
 </body>

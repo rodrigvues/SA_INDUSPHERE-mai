@@ -1,14 +1,15 @@
+header {
+    width: 100%;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     background: #03073a;
     margin: 0;
-    padding: 20px;
     color: #fff;
 }
 
 .container {
-    width: 80%;
-    margin: auto;
     overflow: hidden;
     background: rgba(255, 255, 255, 0.1);
     padding: 20px;
@@ -19,18 +20,17 @@ body {
 .header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
 }
 
 .search-container {
-    position: relative;
     width: 80%;
+    
 }
 
 #search {
-    padding: 10px 10px 10px 40px;
+    padding: 10px 10px;
     font-size: 16px;
-    width: 100%;
+    width: 95%;
     border: none;
     border-radius: 30px;
     outline: none;
@@ -38,6 +38,7 @@ body {
     color: #fff;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
+    margin-bottom: 15px;
 }
 
 #search:focus {
@@ -45,15 +46,13 @@ body {
 }
 
 .search-container .fas {
-    position: absolute;
-    left: 10px;
-    top: 50%;
     transform: translateY(-50%);
     color: #aaa;
+
 }
 
 #add-product {
-    padding: 10px 20px;
+    padding: 10px 10px;
     font-size: 16px;
     background-color: #007bff;
     color: white;
@@ -62,6 +61,10 @@ body {
     cursor: pointer;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease;
+    margin-bottom: 15px;
+    border-color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 20px rgba(13, 103, 187, 0.5);
 }
 
 #add-product:hover {
@@ -75,12 +78,13 @@ body {
 
 .product-table th, .product-table td {
     padding: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgb(255, 255, 255);
     text-align: left;
 }
 
 .product-table th {
     background: rgba(255, 255, 255, 0.2);
+    
 }
 
 .product-table tbody tr:nth-child(even) {
