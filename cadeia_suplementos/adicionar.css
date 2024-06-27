@@ -75,17 +75,17 @@ body {
 #add-button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #28a745;
+    background: linear-gradient(45deg, #00bfff, #1e90ff);
     color: white;
     border: none;
-    border-radius: 20px;
+    border-radius: 24px;
     cursor: pointer;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
 }
 
 #add-button:hover {
-    background-color: #218838;
+    box-shadow: 0 0 20px rgba(0, 191, 255, 0.8);
 }
 
 a {
