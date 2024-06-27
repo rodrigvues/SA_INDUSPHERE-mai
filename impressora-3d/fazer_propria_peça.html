@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future Sync - Fazer Própria Peça</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header" style="background-color: #F8B84E;">
+        <h1>Fazer própria peça</h1>
+    </div>
+    <div class="main-container" style="background-color: #03073a; display: flex; justify-content: space-between; padding: 20px;">
+        <div class="content">
+            <label for="filamento">Tipo filamento</label>
+            <select id="filamento" style="display: block; margin-top: 10px;">
+                <option value="">Selecione</option>
+                <!-- Opções adicionais aqui -->
+            </select>
+            <label for="tamanho" style="margin-top: 20px;">Tamanho</label>
+            <input type="text" id="tamanho" placeholder="Digite o tamanho" style="display: block; margin-top: 10px;">
+            <button class="btn imprimir" style="margin-top: 20px;">Imprimir</button>
+        </div>
+        <div class="image-container" style="text-align: center;">
+            <h2>Edite aqui</h2>
+            <img src="/mnt/data/image.png" alt="Edite aqui" style="width: 300px; height: auto;">
+        </div>
+    </div>
+    <div class="footer" style="text-align: center; padding: 20px; position: relative; margin-top: 20px;">
+        <a href="imprimir_peca.html" class="back-button" style="background-color: #03073a; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block;">Voltar</a>
+    </div>
+</body>
+</html>

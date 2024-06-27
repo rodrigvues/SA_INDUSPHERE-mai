@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future Sync - Pedir Peças ao Fornecedor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FAD07A;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+        h1 {
+            color: #F28C28;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        select, input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .btn {
+            background-color: #F28C28;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background-color: #e07a20;
+        }
+        .back-button {
+            margin-top: 20px;
+            display: inline-block;
+            padding: 10px;
+            color: #333;
+            text-decoration: none;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .back-button:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pedir Peças ao Fornecedor</h1>
+        <form>
+            <label for="tipo-peca">Tipo peça</label>
+            <select id="tipo-peca" name="tipo-peca">
+                <option value="" disabled selected>Selecione o tipo de peça</option>
+                <option value="peca1">Peça 1</option>
+                <option value="peca2">Peça 2</option>
+                <option value="peca3">Peça 3</option>
+            </select>
+            <label for="quantidade">Quantidade</label>
+            <input type="number" id="quantidade" name="quantidade" min="1" placeholder="Digite a quantidade">
+            <button type="submit" class="btn">Fazer pedido</button>
+        </form>
+        <a href="navbar-impressora-3d.html" class="back-button">Voltar</a>
+    </div>
+</body>
+</html>
