@@ -52,23 +52,17 @@ body {
 }
 
 #add-product {
-    padding: 10px 10px;
-    font-size: 16px;
-    background-color: #007bff;
+    background: linear-gradient(45deg, #00bfff, #1e90ff);
     color: white;
     border: none;
-    border-radius: 30px;
+    border-radius: 24px;
     cursor: pointer;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
-    margin-bottom: 15px;
-    border-color: #fff;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-    box-shadow: 0 0 20px rgba(13, 103, 187, 0.5);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
 }
 
 #add-product:hover {
-    background-color: #0056b3;
+    box-shadow: 0 0 20px rgba(0, 191, 255, 0.8);
 }
 
 .product-table {
