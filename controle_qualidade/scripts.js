@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 </ul>
                 <p>Formato: ${relatorio.formatoRelatorio}</p>
                 <p>Data: ${relatorio.data}</p>
-                <button onclick="visualizarRelatorio(${index})">Visualizar</button>
+                <button onclick="visualizarRelatorio(${index})">Baixar em PDF</button>
             `;
             relatoriosContainer.appendChild(relatorioDiv);
         });
