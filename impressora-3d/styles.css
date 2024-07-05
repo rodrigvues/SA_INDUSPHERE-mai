@@ -97,3 +97,8 @@ body {
 .back-button:hover {
     background-color: hsl(250, 3%, 64%);
 }
+
+
+label {
+    color: #fff;
+}
