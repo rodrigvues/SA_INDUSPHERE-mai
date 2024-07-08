@@ -49,10 +49,6 @@ button:hover {
     background: #555;
 }
 
-button + button {
-    margin-left: 10px;
-}
-
 p {
     text-align: center;
 }
@@ -62,7 +58,7 @@ p {
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #03073A;
     margin: 0;
     padding: 0;
     display: flex;
@@ -74,7 +70,7 @@ body {
 .container {
     background-color: #fff;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 100%;
@@ -97,7 +93,7 @@ label {
 }
 
 input, select, button {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
@@ -105,14 +101,18 @@ input, select, button {
 }
 
 button {
-    background-color: #4CAF50;
+    background-color: #03073A;
     color: white;
     border: none;
     cursor: pointer;
+    transition: 0.4s;
+    border: 2px solid #ffffff;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: white;
+    color: #03073A;
+    border: 2px solid #03073A;
 }
 
 button[type="button"] {
